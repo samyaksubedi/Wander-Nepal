@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="A small, reusable travel guide to beautiful places in Nepal."
+      content="Explore 42 beautiful places in Nepal, including underrated hidden gems, with photos, descriptions, locations, and Google Maps links."
     />
-    <title>Wander Nepal | Beautiful Places to Visit</title>
+    <title>Wander Nepal | 42 Beautiful Places to Visit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,7 +38,6 @@
 
         <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
           <a href="#places">Places</a>
-          <a href="#add-place">Add a place</a>
           <a href="#about">About</a>
         </nav>
       </div>
@@ -55,9 +54,9 @@
           </p>
           <a class="button button-primary" href="#places">Explore places <span aria-hidden="true">↓</span></a>
 
-          <div class="hero-note" aria-label="Three featured places">
-            <span class="note-number">03</span>
-            <span>featured places<br />to start with</span>
+          <div class="hero-note" aria-label="Forty-two destinations">
+            <span class="note-number">42</span>
+            <span>destinations<br />to discover</span>
           </div>
         </div>
       </section>
@@ -67,16 +66,43 @@
           <div class="section-heading">
             <div>
               <p class="eyebrow">Start exploring</p>
-              <h2 id="places-title">Three beautiful places in Nepal</h2>
+              <h2 id="places-title">Forty-two beautiful places in Nepal</h2>
             </div>
             <p class="section-intro">
-              Each card has a short description, a general location, and a link
-              that opens the place in Google Maps.
+              Search by place or district, filter by experience, or sort the
+              complete guide. Every card links to Google Maps.
             </p>
           </div>
 
-          <div class="places-grid">
-            <article class="place-card">
+          <div class="explorer-toolbar" aria-label="Find a destination">
+            <label class="search-field" for="place-search">
+              <span class="sr-only">Search Nepal destinations</span>
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input id="place-search" type="search" placeholder="Search a place or district" autocomplete="off" aria-label="Search destinations" />
+            </label>
+            <div class="filter-row" aria-label="Filter destinations by category">
+              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="filter-button filter-button-gem" type="button" data-filter="Hidden gems" aria-pressed="false">Hidden gems</button>
+              <button class="filter-button" type="button" data-filter="Mountains" aria-pressed="false">Mountains</button>
+              <button class="filter-button" type="button" data-filter="Lakes" aria-pressed="false">Lakes</button>
+              <button class="filter-button" type="button" data-filter="Heritage" aria-pressed="false">Heritage</button>
+              <button class="filter-button" type="button" data-filter="Nature" aria-pressed="false">Nature</button>
+              <button class="filter-button" type="button" data-filter="Culture" aria-pressed="false">Culture</button>
+            </div>
+            <label class="sort-field" for="place-sort">
+              <span>Sort</span>
+              <select id="place-sort" aria-label="Sort destinations">
+                <option value="default">Featured order</option>
+                <option value="name-asc">Name: A–Z</option>
+                <option value="name-desc">Name: Z–A</option>
+                <option value="category">Category</option>
+              </select>
+            </label>
+          </div>
+          <p class="result-count" id="places-result-count" aria-live="polite">Showing all 42 places</p>
+
+          <div class="places-grid" id="places-grid">
+            <article class="place-card" data-category="Lakes" data-search="phewa lake pokhara kaski gandaki boating mountain annapurna">
               <figure class="place-image-wrap">
                 <img
                   class="place-image"
@@ -112,7 +138,7 @@
               </div>
             </article>
 
-            <article class="place-card">
+            <article class="place-card" data-category="Nature" data-search="chitwan national park sauraha chitwan bagmati wildlife jungle safari rhino">
               <figure class="place-image-wrap">
                 <img
                   class="place-image"
@@ -148,7 +174,7 @@
               </div>
             </article>
 
-            <article class="place-card">
+            <article class="place-card" data-category="Heritage" data-search="boudhanath boudha stupa kathmandu bagmati buddhism heritage prayer">
               <figure class="place-image-wrap">
                 <img
                   class="place-image"
@@ -183,25 +209,9 @@
                 </div>
               </div>
             </article>
+            <!-- The remaining researched destination cards are added by script.js. -->
           </div>
-        </div>
-      </section>
-
-      <section class="add-section section" id="add-place" aria-labelledby="add-title">
-        <div class="container add-layout">
-          <div>
-            <p class="eyebrow">Made for extending</p>
-            <h2 id="add-title">Ready for your next discovery.</h2>
-          </div>
-          <div class="add-copy">
-            <p>
-              The design is already prepared for more places. Copy the card
-              template in <code>index.html</code>, replace the image, location,
-              description, and map link, then it will automatically match the
-              layout.
-            </p>
-            <a class="text-link" href="README.md">See the 30-place list and card guide <span aria-hidden="true">→</span></a>
-          </div>
+          <p class="empty-state" id="empty-state" hidden>No places match that search. Try another name or category.</p>
         </div>
       </section>
 
@@ -221,7 +231,7 @@
     <footer class="site-footer">
       <div class="container footer-content">
         <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">✦</span><span>Wander Nepal</span></a>
-        <p>Built as a reusable static travel-page starter.</p>
+        <p>Built as a reusable static Nepal travel guide.</p>
         <p>© <span id="current-year"></span></p>
       </div>
     </footer>
@@ -229,10 +239,11 @@
     <!--
       COPY THIS TEMPLATE inside .places-grid to add another place.
       Replace every ALL-CAPS value with your researched information.
+      Add CATEGORY as one of: Mountains, Lakes, Heritage, Nature, or Culture.
 
-      <article class="place-card">
+      <article class="place-card" data-category="CATEGORY" data-search="PLACE NAME CITY OR DISTRICT CATEGORY">
         <figure class="place-image-wrap">
-          <img class="place-image" src="YOUR-IMAGE-URL" alt="DESCRIBE THE IMAGE" />
+          <img class="place-image" src="YOUR-IMAGE-URL" alt="DESCRIBE THE IMAGE" loading="lazy" decoding="async" />
           <figcaption>TYPE OF EXPERIENCE</figcaption>
         </figure>
         <div class="place-content">
@@ -240,8 +251,8 @@
           <h3>PLACE NAME</h3>
           <p>YOUR SHORT DESCRIPTION.</p>
           <div class="card-bottom">
-            <a class="map-link" href="YOUR-GOOGLE-MAPS-LINK" target="_blank" rel="noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a>
-            <a class="photo-credit" href="YOUR-PHOTO-SOURCE-LINK" target="_blank" rel="noreferrer">Photo source</a>
+            <a class="map-link" href="YOUR-GOOGLE-MAPS-LINK" target="_blank" rel="noopener noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a>
+            <a class="photo-credit" href="YOUR-PHOTO-SOURCE-LINK" target="_blank" rel="noopener noreferrer">Photo and licence</a>
           </div>
         </div>
       </article>

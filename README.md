@@ -1,53 +1,71 @@
-# Wander Nepal — static travel-page starter
+# Wander Nepal — complete static travel guide
 
-Open `index.html` in a browser to view the page. The page uses only HTML, CSS, and a small amount of JavaScript.
+Open `index.html` in a browser to view the site. It uses only HTML, CSS, and JavaScript—there is no server or database needed.
+
+## What is included
+
+- 42 researched Nepal destinations, including 12 underrated hidden gems
+- A photo, short description, general location, Google Maps search link, and linked photo credit for every destination
+- Search plus filters for hidden gems, mountains, lakes, heritage, nature, and culture
+- A responsive layout and mobile menu
+
+The first three cards are written directly in `index.html`. The remaining 39 cards are stored in the clearly labelled `additionalPlaces` list at the top of `script.js`, so the page stays easier to maintain.
 
 ## Add another place
 
-1. Open `index.html`.
-2. Find the `COPY THIS TEMPLATE` comment near the bottom.
-3. Copy that full `<article class="place-card">...</article>` block inside `<div class="places-grid">`.
-4. Replace the image URL, image description (`alt`), location text, title, description, Google Maps link, and photo-source link.
+The simplest option is to copy one object in `additionalPlaces` inside `script.js` and replace its values. Use one of these category values so the filters continue to work:
 
-For a Google Maps link, search for the location in Google Maps, select **Share**, then copy the link. The existing cards use Google Maps search links, which are also fine.
+`Mountains`, `Lakes`, `Heritage`, `Nature`, or `Culture`. Add `hiddenGem: true` to include it in the Hidden gems filter.
 
-## 30 Nepal places to research and add
+You can also copy the commented card template at the end of `index.html`. If you do, update its `data-category` and `data-search` attributes too.
 
-1. Rara Lake — Mugu, Karnali
-2. Annapurna Base Camp — Kaski, Gandaki
-3. Everest Base Camp — Solukhumbu, Koshi
-4. Lumbini — Rupandehi, Lumbini Province
-5. Bhaktapur Durbar Square — Bhaktapur, Bagmati
-6. Patan Durbar Square — Lalitpur, Bagmati
-7. Kathmandu Durbar Square — Kathmandu, Bagmati
-8. Swayambhunath Stupa — Kathmandu, Bagmati
-9. Pashupatinath Temple — Kathmandu, Bagmati
-10. Nagarkot — Bhaktapur, Bagmati
-11. Bandipur — Tanahun, Gandaki
-12. Ilam Tea Gardens — Ilam, Koshi
-13. Langtang National Park — Rasuwa, Bagmati
-14. Gosaikunda Lake — Rasuwa, Bagmati
-15. Mustang / Lo Manthang — Mustang, Gandaki
-16. Muktinath Temple — Mustang, Gandaki
-17. Tilicho Lake — Manang, Gandaki
-18. Khaptad National Park — Sudurpashchim
-19. Bardiya National Park — Bardiya, Lumbini Province
-20. Shey Phoksundo Lake — Dolpa, Karnali
-21. Tansen — Palpa, Lumbini Province
-22. Janakpur Dham — Dhanusha, Madhesh
-23. Manakamana Temple — Gorkha, Gandaki
-24. Gorkha Durbar — Gorkha, Gandaki
-25. World Peace Pagoda — Pokhara, Gandaki
-26. Davis Falls — Pokhara, Gandaki
-27. Sarangkot — Pokhara, Gandaki
-28. Shivapuri Nagarjun National Park — Kathmandu Valley, Bagmati
-29. Kanchenjunga Conservation Area — Taplejung, Koshi
-30. Api Nampa Conservation Area — Darchula, Sudurpashchim
+For a Google Maps link, search for a destination in Google Maps, choose **Share**, and copy the link. The site currently uses Google Maps search links instead of coordinates.
 
-## Photos and research in this starter
+## The 42 destinations
 
-The three included images come from Wikimedia Commons. Each card has a linked photo credit so you can check its licence and creator before reusing or replacing it. The Phewa Lake image uses CC BY-SA 4.0, so retain its attribution if you keep that image.
+1. Phewa Lake
+2. Chitwan National Park
+3. Boudhanath Stupa
+4. Swayambhunath Stupa
+5. Pashupatinath Temple
+6. Kathmandu Durbar Square
+7. Patan Durbar Square
+8. Bhaktapur Durbar Square
+9. Changu Narayan Temple
+10. Nagarkot
+11. Chandragiri Hills
+12. Maya Devi Temple, Lumbini
+13. Bandipur
+14. Sarangkot
+15. World Peace Pagoda
+16. Begnas Lake
+17. Annapurna Base Camp
+18. Ghorepani–Poon Hill
+19. Mardi Himal
+20. Manang Valley
+21. Muktinath Temple
+22. Upper Mustang & Lo Manthang
+23. Everest Base Camp
+24. Gokyo Lakes
+25. Namche Bazaar
+26. Langtang Valley
+27. Gosaikunda Lake
+28. Rara Lake
+29. Shey Phoksundo Lake
+30. Ilam Tea Gardens
+31. Khaptad National Park
+32. Bardiya National Park
+33. Tansen
+34. Nuwakot Durbar Square
+35. Ghandruk
+36. Ghalegaun
+37. Sikles
+38. Tsum Valley
+39. Panch Pokhari
+40. Daman
+41. Bhedetar
+42. Limi Valley
 
-- Phewa Lake facts: Nepal Tourism Board’s Pokhara guide
-- Chitwan National Park facts: Nepal Tourism Board’s Chitwan guide
-- Boudhanath facts: Nepal Tourism Board’s Boudha guide
+## Sources and photo use
+
+Destination information was researched from the Nepal Tourism Board, UNESCO, and relevant destination authorities. Each card links to its original Wikimedia Commons photo page, where you can see the creator and licence. Keep those credits if you reuse the images—most are licensed CC BY-SA, which requires attribution.
