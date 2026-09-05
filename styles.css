@@ -154,7 +154,8 @@ a:focus-visible {
 .hero {
   position: relative;
   display: grid;
-  min-height: 720px;
+  min-height: 100vh;
+  min-height: 100svh;
   overflow: hidden;
   place-items: center;
   color: var(--paper);
@@ -628,10 +629,6 @@ h3 {
 }
 
 @media (max-width: 840px) {
-  .hero {
-    min-height: 660px;
-  }
-
   .places-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -676,7 +673,6 @@ h3 {
   }
 
   .hero {
-    min-height: 640px;
     background-position: 59% center;
   }
 
