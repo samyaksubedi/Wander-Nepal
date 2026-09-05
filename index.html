@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A small, reusable travel guide to beautiful places in Nepal."
+    />
+    <title>Wander Nepal | Beautiful Places to Visit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#places">Skip to places</a>
+
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="Wander Nepal home">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>Wander Nepal</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          <span class="sr-only">Open navigation</span>
+          <span aria-hidden="true">Menu</span>
+        </button>
+
+        <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+          <a href="#places">Places</a>
+          <a href="#add-place">Add a place</a>
+          <a href="#about">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-content">
+          <p class="eyebrow">A small travel guide to Nepal</p>
+          <h1 id="hero-title">Find a place that feels <em>unreal.</em></h1>
+          <p class="hero-copy">
+            From quiet mountain lakes to living heritage and wild jungle, Nepal
+            is full of remarkable places to explore.
+          </p>
+          <a class="button button-primary" href="#places">Explore places <span aria-hidden="true">↓</span></a>
+
+          <div class="hero-note" aria-label="Three featured places">
+            <span class="note-number">03</span>
+            <span>featured places<br />to start with</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="places-section section" id="places" aria-labelledby="places-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Start exploring</p>
+              <h2 id="places-title">Three beautiful places in Nepal</h2>
+            </div>
+            <p class="section-intro">
+              Each card has a short description, a general location, and a link
+              that opens the place in Google Maps.
+            </p>
+          </div>
+
+          <div class="places-grid">
+            <article class="place-card">
+              <figure class="place-image-wrap">
+                <img
+                  class="place-image"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Phewa_Lake_with_Annapurna_Range.jpg/1280px-Phewa_Lake_with_Annapurna_Range.jpg"
+                  alt="Phewa Lake in Pokhara with mountains reflected in the water"
+                />
+                <figcaption>Lake &amp; mountain views</figcaption>
+              </figure>
+              <div class="place-content">
+                <p class="place-location"><span aria-hidden="true">⌖</span> Pokhara, Kaski</p>
+                <h3>Phewa Lake</h3>
+                <p>
+                  Pokhara’s best-known lake is a calm place for boating, sunset
+                  views, and looking toward the Annapurna range. You can also
+                  take a boat to the small Tal Barahi Temple on its island.
+                </p>
+                <div class="card-bottom">
+                  <a
+                    class="map-link"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=Phewa+Lake%2C+Pokhara%2C+Nepal"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open in Google Maps <span aria-hidden="true">↗</span>
+                  </a>
+                  <a
+                    class="photo-credit"
+                    href="https://commons.wikimedia.org/wiki/File:Phewa_Lake_with_Annapurna_Range.jpg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >Photo: Rajivkilanashrestha / CC BY-SA 4.0</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="place-card">
+              <figure class="place-image-wrap">
+                <img
+                  class="place-image"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Spotted_deers_in_Chitwan_National_Park.jpg/1280px-Spotted_deers_in_Chitwan_National_Park.jpg"
+                  alt="Spotted deer in Chitwan National Park"
+                />
+                <figcaption>Wildlife &amp; jungle</figcaption>
+              </figure>
+              <div class="place-content">
+                <p class="place-location"><span aria-hidden="true">⌖</span> Sauraha, Chitwan</p>
+                <h3>Chitwan National Park</h3>
+                <p>
+                  A UNESCO natural heritage site in Nepal’s lowlands, Chitwan
+                  is known for jungle safaris, birdwatching, river activities,
+                  and the chance to spot one-horned rhinos.
+                </p>
+                <div class="card-bottom">
+                  <a
+                    class="map-link"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=Chitwan+National+Park%2C+Sauraha%2C+Nepal"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open in Google Maps <span aria-hidden="true">↗</span>
+                  </a>
+                  <a
+                    class="photo-credit"
+                    href="https://commons.wikimedia.org/wiki/File:Spotted_deers_in_Chitwan_National_Park.jpg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >Photo: Anupama Rajya Shahi / CC0</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="place-card">
+              <figure class="place-image-wrap">
+                <img
+                  class="place-image"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Boudhanath%2C_main_stupa.jpg/1280px-Boudhanath%2C_main_stupa.jpg"
+                  alt="The white dome and golden spire of Boudhanath Stupa in Kathmandu"
+                />
+                <figcaption>Culture &amp; heritage</figcaption>
+              </figure>
+              <div class="place-content">
+                <p class="place-location"><span aria-hidden="true">⌖</span> Boudha, Kathmandu</p>
+                <h3>Boudhanath Stupa</h3>
+                <p>
+                  One of Kathmandu’s most recognisable landmarks, Boudhanath is
+                  a UNESCO World Heritage Site and an important centre of
+                  Himalayan Buddhism, surrounded by prayer wheels and monasteries.
+                </p>
+                <div class="card-bottom">
+                  <a
+                    class="map-link"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=Boudhanath+Stupa%2C+Kathmandu%2C+Nepal"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open in Google Maps <span aria-hidden="true">↗</span>
+                  </a>
+                  <a
+                    class="photo-credit"
+                    href="https://commons.wikimedia.org/wiki/File:Boudhanath,_main_stupa.jpg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >Photo: Dudva / CC0</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="add-section section" id="add-place" aria-labelledby="add-title">
+        <div class="container add-layout">
+          <div>
+            <p class="eyebrow">Made for extending</p>
+            <h2 id="add-title">Ready for your next discovery.</h2>
+          </div>
+          <div class="add-copy">
+            <p>
+              The design is already prepared for more places. Copy the card
+              template in <code>index.html</code>, replace the image, location,
+              description, and map link, then it will automatically match the
+              layout.
+            </p>
+            <a class="text-link" href="README.md">See the 30-place list and card guide <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="container about-content">
+          <p class="eyebrow">Travel with care</p>
+          <h2 id="about-title">Leave every place as beautiful as you found it.</h2>
+          <p>
+            This is a starter guide, not a complete travel plan. Check local
+            rules, weather, trail conditions, and responsible-travel guidance
+            before you go.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">✦</span><span>Wander Nepal</span></a>
+        <p>Built as a reusable static travel-page starter.</p>
+        <p>© <span id="current-year"></span></p>
+      </div>
+    </footer>
+
+    <!--
+      COPY THIS TEMPLATE inside .places-grid to add another place.
+      Replace every ALL-CAPS value with your researched information.
+
+      <article class="place-card">
+        <figure class="place-image-wrap">
+          <img class="place-image" src="YOUR-IMAGE-URL" alt="DESCRIBE THE IMAGE" />
+          <figcaption>TYPE OF EXPERIENCE</figcaption>
+        </figure>
+        <div class="place-content">
+          <p class="place-location"><span aria-hidden="true">⌖</span> CITY OR DISTRICT, PROVINCE</p>
+          <h3>PLACE NAME</h3>
+          <p>YOUR SHORT DESCRIPTION.</p>
+          <div class="card-bottom">
+            <a class="map-link" href="YOUR-GOOGLE-MAPS-LINK" target="_blank" rel="noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a>
+            <a class="photo-credit" href="YOUR-PHOTO-SOURCE-LINK" target="_blank" rel="noreferrer">Photo source</a>
+          </div>
+        </div>
+      </article>
+    -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
